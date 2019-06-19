@@ -25,9 +25,9 @@ __author__ = 'Johhan'
 LOGGER = getLogger(__name__)
 
 
-class FunSkill(MycroftSkill):
+class FavoriteSinger(MycroftSkill):
     def __init__(self):
-        super(FunSkill, self).__init__(name="FunSkill")
+        super(FavoriteSinger, self).__init__(name="FavoriteSinger")
 
     def initialize(self):
         self.load_data_files(dirname(__file__))
@@ -51,7 +51,7 @@ class FunSkill(MycroftSkill):
 
 
     def handle_fun_intent(self, message):
-        self.speak_dialog("Mia Khalifa, She can sing high notes with no efforts")
+        self.speak("Mia Khalifa, She can sing high notes with no efforts")
 
     # def handle_how_are_you_intent(self, message):
     #     self.speak_dialog("how.are.you")
@@ -64,4 +64,4 @@ class FunSkill(MycroftSkill):
 
 
 def create_skill():
-    return FunSkill()
+    return FavoriteSinger()
